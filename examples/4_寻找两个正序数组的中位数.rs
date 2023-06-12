@@ -39,7 +39,7 @@ impl Solution {
                 j += 1;
             }
         }
-        if pos % 2 == 0 {
+        if pos % 2 == 0 && length > 1 {
             // 前后
             (p.1[p.0] + last.1[last.0]) as f64 / 2.
         } else {
