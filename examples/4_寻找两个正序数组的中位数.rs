@@ -39,7 +39,7 @@ impl Solution {
                 j += 1;
             }
         }
-        if pos % 2 == 0 && length > 1 {
+        if length % 2 == 0 {
             // 前后
             (p.1[p.0] + last.1[last.0]) as f64 / 2.
         } else {
@@ -51,7 +51,7 @@ impl Solution {
 // @lc code=end
 fn main() {
     let nums = vec![
-        (vec![1, 3], vec![2]), (vec![1, 2], vec![3, 4]), (vec![], vec![1])
+        (vec![1, 3], vec![2]), (vec![1, 2], vec![3, 4]), (vec![], vec![1]), (vec![], vec![1, 2])
         ];
     for n in nums {
         println!("{}", Solution::find_median_sorted_arrays(n.0, n.1));
